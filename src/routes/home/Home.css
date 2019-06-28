@@ -1,0 +1,50 @@
+.intro-content{
+    min-height: calc(100vh - 48px);
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+
+.contact-form {
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-bottom: 120px;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.contact-title {
+    padding-left: 120px;
+    padding-right: 120px;
+    font-size: 24px;
+    letter-spacing: 1px
+}
+
+.social-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 991.98px) {
+    .intro-text {
+        font-size: 32px !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .intro-text {
+        font-size: 24px !important;
+    }
+
+    .contact-form {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+        padding-bottom: 60px !important;
+    }
+
+    .contact-title {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+}
+
