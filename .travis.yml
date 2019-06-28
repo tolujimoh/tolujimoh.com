@@ -3,13 +3,13 @@ services:
   - docker
 
 script:
-  - docker build -t $IMAGE_NAME .
+  - docker build -t "$IMAGE_NAME" .
 
 after_script:
   - docker images
 
 before_deploy:
-  - docker login -u $DOCKER_USER -p $DOCKER_PASS
+  - docker login -u "$DOCKER_USER" -p "$DOCKER_PASS"
   - docker tag "$IMAGE_NAME" "tolujimoh/${IMAGE_NAME}:latest"
 
 deploy:
