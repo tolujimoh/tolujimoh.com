@@ -12,7 +12,7 @@ import githubLogo from './images/icons/github-logo.svg';
 
 import './Home.css';
 
-
+// TODO: Email Implementation
 const Home: React.FC = () => {
     return <>
         <Container fluid  style={{ backgroundColor: '#f9f9f9', padding: 24}}>
