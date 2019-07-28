@@ -5,11 +5,13 @@ import Container from 'react-bootstrap/es/Container';
 import Col from 'react-bootstrap/es/Col';
 import Image from 'react-bootstrap/es/Image';
 import Card from 'react-bootstrap/es/Card';
+import Form from "react-bootstrap/es/Form";
 
 import githubLogo from './images/icons/github-logo.svg';
 // import behanceLogo from './images/icons/behance-logo.svg';
 
 import './Home.css';
+
 
 const Home: React.FC = () => {
     return <>
@@ -67,44 +69,46 @@ const Home: React.FC = () => {
                 </Row>
                 <Row className={'contact-form'}>
                     <Col lg={8}>
-                        <Card>
-                            <div className='card-header'>
-                                @
-                            </div>
-                            <div className='card-body'>
-                                <Row>
-                                    <Col md={3}>
-                                        <h5 className='card-text'>From:</h5>
-                                    </Col>
-                                    <Col md={9}>
-                                        <h5 className='card-title'><u>your@email.com</u></h5>
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col md={3}>
-                                        <h5 className='card-text'>To:</h5>
-                                    </Col>
-                                    <Col md={9}>
-                                        <h5 className='card-title'>Tolu Jimoh</h5>
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col md={3}>
-                                        <h5 className='card-text'>Subject:</h5>
-                                    </Col>
-                                    <Col md={9}>
-                                        <h5 className='card-title'><u>Type Message Subject</u></h5>
-                                    </Col>
-                                </Row>
-                                <hr />
-                                <br />
-                                <h5 className='card-text'>Hi Tolu,</h5>
-                                <h5 className='card-text'><u>Type Message</u></h5>
-                                <br />
-                                <br />
-                                <a href='mailto:stjimoh@gmail.com' className='btn btn-primary float-right'>Send Email</a>
-                            </div>
-                        </Card>
+                        <Form>
+                            <Card>
+                                <div className='card-header'>
+                                    @
+                                </div>
+                                <div className='card-body'>
+                                    <Row>
+                                        <Col md={3}>
+                                            <h5 className='card-text'>From:</h5>
+                                        </Col>
+                                        <Col md={9}>
+                                            <Form.Control className="contact-form-input" type="email" placeholder="your@email.com" />
+
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col md={3}>
+                                            <h5 className='card-text'>To:</h5>
+                                        </Col>
+                                        <Col md={9}>
+                                            <h5 className='card-title'>Tolu Jimoh</h5>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col md={3}>
+                                            <h5 className='card-text'>Subject:</h5>
+                                        </Col>
+                                        <Col md={9}>
+                                            <Form.Control className="contact-form-input" type="text" placeholder="Type Message Subject" />
+                                        </Col>
+                                    </Row>
+                                    <hr />
+                                    <br />
+                                    <h5 className='card-text'>Hi Tolu,</h5>
+                                    <Form.Control as="textarea" rows="4" className="contact-form-input" placeholder="Type Message" />
+                                    <br />
+                                    <a href='mailto:stjimoh@gmail.com' className='btn btn-primary float-right'>Send Email</a>
+                                </div>
+                            </Card>
+                        </Form>
                     </Col>
                 </Row>
             </Container>
