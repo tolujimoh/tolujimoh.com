@@ -57,6 +57,7 @@
     font-weight: 500;
     line-height: 1.2;
     color: black;
+    letter-spacing: 1px;
 }
 
 .contact-form-input:focus {
