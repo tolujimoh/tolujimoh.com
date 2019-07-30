@@ -13,6 +13,6 @@ const App: React.FC = () => {
           <Route path="/project" component={Project} />
       </Router>
   );
-}
+};
 
 export default App;

@@ -56,13 +56,13 @@
     font-size: 1.25rem;
     font-weight: 500;
     line-height: 1.2;
-    color: black;
+    color: #212529;
     letter-spacing: 1px;
 }
 
 .contact-form-input:focus {
     box-shadow: none;
-    color: black;
+    color: #212529;
 }
 
 .contact-form-input::placeholder{
@@ -73,3 +73,17 @@
 }
 .contact-form-input::-ms-input-placeholder{}
 .contact-form-input:-ms-input-placeholder{}
+
+.card-columns {
+    -webkit-column-count:2;
+    -moz-column-count:2;
+    column-count:2;
+}
+
+@media (max-width: 991.98px) {
+    .card-columns {
+        -webkit-column-count:1;
+        -moz-column-count:1;
+        column-count:1;
+    }
+}
