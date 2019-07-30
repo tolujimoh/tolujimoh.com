@@ -1,7 +1,18 @@
 import React from "react";
+import {Route, RouteComponentProps} from "react-router";
 
-const Project: React.FC = () => {
-    return <div></div>
+import openHeavens from "./openheavens";
+import linearAlgebra from "./linear_algebra";
+
+
+
+const Project: React.FC<RouteComponentProps> = ({ match }) => {
+    return (
+        <>
+            <Route path={`${match.path}/openheavens`} component={openHeavens} />
+            <Route path={`${match.path}/linear_algebra`} component={linearAlgebra} />
+        </>
+    );
 };
 
 export default Project;
