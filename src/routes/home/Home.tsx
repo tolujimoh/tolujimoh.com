@@ -77,7 +77,7 @@ const Home: React.FC = () => {
                     <Row>
                         <Container style={{marginTop: 120}}>
                             <CardColumns>
-                                <Link to="/project/openheavens">
+                                <Link to="/">
                                     <Card style={{maxWidth: 480, border: 0, background: "transparent"}}>
                                         <Card.Header style={{
                                             border: 0,
@@ -97,7 +97,7 @@ const Home: React.FC = () => {
                                     </Card>
                                 </Link>
 
-                                <Link to="/project/linear_algebra">
+                                <Link to="/">
                                     <Card style={{maxWidth: 480, marginTop: 160, border: 0, background: "transparent"}}>
                                         <Card.Header style={{
                                             border: 0,
