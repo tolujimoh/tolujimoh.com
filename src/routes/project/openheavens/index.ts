@@ -1,3 +1,3 @@
-import visualizedLinearAlgebra from "./visualizedLinearAlgebra";
+import openHeavens from "./openHeavens";
 
-export default visualizedLinearAlgebra;
+export default openHeavens;
