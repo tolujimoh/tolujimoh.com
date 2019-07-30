@@ -56,12 +56,14 @@ const Home: React.FC = () => {
                     </Row>
                 </Container>
                 <Container fluid style={{marginTop: 60, marginBottom: 200, minHeight: 'calc(100vh - 48px)'}}>
-                    <div style={{position: 'relative', left: '160px', top: '-100px', display: 'inline-block' }}>
-                        <svg height='120'>
-                            <text fill='#FF3253' letterSpacing='-1' fontWeight='900' fillOpacity='0' fontSize='88' x='0'
-                                  y='90' stroke='#FF3253' strokeWidth='1.5'>Work.
-                            </text>
-                        </svg>
+                    <div style={{position: 'relative', top: '-100px' }}>
+                        <Container>
+                            <svg height='120' style={{marginLeft: 36}}>
+                                <text fill='#FF3253' letterSpacing='-1' fontWeight='900' fillOpacity='0' fontSize='88' x='0'
+                                      y='90' stroke='#FF3253' strokeWidth='1.5'>Work.
+                                </text>
+                            </svg>
+                        </Container>
                     </div>
                     <Row style={{fontSize: 24, letterSpacing: 0.5}}>
                         <Container>
@@ -128,12 +130,14 @@ const Home: React.FC = () => {
                     backgroundColor: '#F1E4E8',
                     borderRadius: 12
                 }}>
-                    <div style={{position: 'relative', paddingLeft: '160px', top: '-60px', display: 'inline-block' }}>
-                        <svg height='120'>
-                            <text fill='#FF3253' letterSpacing='-1' fontWeight='900' fillOpacity='0' fontSize='88' x='0'
-                                  y='90' stroke='#FF3253' strokeWidth='1.5'>Say hi.
-                            </text>
-                        </svg>
+                    <div style={{position: 'relative', top: '-60px'}}>
+                        <Container fluid className={'contact-title'}>
+                            <svg height='120' style={{marginLeft: 24}}>
+                                <text fill='#FF3253' letterSpacing='-1' fontWeight='900' fillOpacity='0' fontSize='88' x='0'
+                                      y='90' stroke='#FF3253' strokeWidth='1.5'>Say hi.
+                                </text>
+                            </svg>
+                        </Container>
                     </div>
                     <Row className={'contact-title'}>
                         <Col lg={8}>
