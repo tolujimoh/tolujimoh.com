@@ -1,0 +1,33 @@
+.sidebar__inner {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+@media (min-width: 1200px) {
+    .sidebar__inner {
+        height: 100vh;
+    }
+}
+
+body {
+    background: #F9F9F9;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+
+}
+
+.content__title {
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 75px;
+    color: black;
+}
+
+canvas {
+    cursor: pointer;
+}
