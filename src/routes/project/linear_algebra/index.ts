@@ -1,3 +1,3 @@
-import visualizedLinearAlgebra from "./visualizedLinearAlgebra";
+import linearAlgebra from "./linearAlgebra";
 
-export default visualizedLinearAlgebra;
+export default linearAlgebra;
