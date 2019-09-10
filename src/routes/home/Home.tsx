@@ -9,6 +9,8 @@ import Image from 'react-bootstrap/es/Image';
 import Card from 'react-bootstrap/es/Card';
 import Form from "react-bootstrap/es/Form";
 
+import emailjs from 'emailjs-com';
+
 import githubLogo from './images/icons/github-logo.svg';
 // import behanceLogo from './images/icons/behance-logo.svg';
 
@@ -19,7 +21,6 @@ import linearAlgebraImg from './images/linear_algebra.png';
 import './Home.css';
 import CardColumns from "react-bootstrap/es/CardColumns";
 import {Link} from "react-router-dom";
-import {Base64} from "js-base64";
 
 type appProps = {}
 
@@ -29,12 +30,6 @@ type appState = {
     message: string
 }
 
-const SCOPES = 'https://www.googleapis.com/auth/gmail.readonly';
-
-const API_KEY = 'AIzaSyDdunqU_AUOdlpgQsrPEO_SkaDI9DMNH3o';
-const CLIENT_ID = '534383682503-0c17t6souoc90cvjq6fbh9v2bdeu09j0.apps.googleusercontent.com';
-
-const DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/gmail/v1/rest"];
 
 // TODO: Email Implementation
 class Home extends React.Component<appProps, appState> {
@@ -43,26 +38,6 @@ class Home extends React.Component<appProps, appState> {
         subject: "",
         message: ""
     };
-
-    componentDidMount(): void {
-        this.loadEmailClient()
-    }
-
-    loadEmailClient(): void {
-        gapi.load('client:auth2', () => {
-            gapi.client.init({
-                apiKey: API_KEY,
-                clientId: CLIENT_ID,
-                discoveryDocs: DISCOVERY_DOCS,
-                scope: SCOPES
-            }).then((value) => {
-                console.log(value);
-            }, (reason) => {
-                console.error(reason);
-            });
-        });
-
-    }
 
     handleFromChange = (event: React.FormEvent<any>) => {
         const fromEmail = event.currentTarget.value;
@@ -79,29 +54,15 @@ class Home extends React.Component<appProps, appState> {
 
     handleFormSubmit = (event : React.FormEvent<any>) => {
         event.preventDefault();
-        const email = `
-        Email: ${this.state.fromEmail} \n
-        Subject: ${this.state.subject} \n
-        Message: ${this.state.message} \n
-        `;
-        this.sendMessage(email, null);
+
+        emailjs.send('mailgun','tolujimoh_com_contact_form', this.state, 'user_3fQbNehvf6N2TABPuadeL')
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+            }, (err) => {
+                console.log('FAILED...', err);
+            });
     };
 
-    sendMessage(email: string, callback: null): void {
-        gapi.client.load('gmail', 'v1', () => {
-            const base64EncodedEmail = Base64.encodeURI(email);
-
-            // @ts-ignore
-            const request = gapi.client.gmail.users.messages.send({
-                'userId': 'me',
-                'resource': {
-                    'raw': base64EncodedEmail
-                }
-            });
-            request.execute(callback);
-        });
-
-    }
 
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> {
         return (
