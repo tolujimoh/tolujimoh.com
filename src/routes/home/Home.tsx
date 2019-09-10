@@ -34,7 +34,7 @@ const SCOPES = 'https://www.googleapis.com/auth/gmail.readonly';
 const API_KEY = 'AIzaSyDdunqU_AUOdlpgQsrPEO_SkaDI9DMNH3o';
 const CLIENT_ID = '534383682503-0c17t6souoc90cvjq6fbh9v2bdeu09j0.apps.googleusercontent.com';
 
-var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/gmail/v1/rest"];
+const DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/gmail/v1/rest"];
 
 // TODO: Email Implementation
 class Home extends React.Component<appProps, appState> {
@@ -79,17 +79,21 @@ class Home extends React.Component<appProps, appState> {
 
     handleFormSubmit = (event : React.FormEvent<any>) => {
         event.preventDefault();
-
-        console.log(this.state)
+        const email = `
+        Email: ${this.state.fromEmail} \n
+        Subject: ${this.state.subject} \n
+        Message: ${this.state.message} \n
+        `;
+        this.sendMessage(email, null);
     };
 
-    sendMessage(userId: string, email: string, callback: () => {}): void {
+    sendMessage(email: string, callback: null): void {
         gapi.client.load('gmail', 'v1', () => {
             const base64EncodedEmail = Base64.encodeURI(email);
 
             // @ts-ignore
             const request = gapi.client.gmail.users.messages.send({
-                'userId': userId,
+                'userId': 'me',
                 'resource': {
                     'raw': base64EncodedEmail
                 }
