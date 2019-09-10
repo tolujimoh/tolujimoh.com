@@ -34,13 +34,15 @@ const SCOPES = 'https://www.googleapis.com/auth/gmail.readonly';
 const API_KEY = 'AIzaSyDdunqU_AUOdlpgQsrPEO_SkaDI9DMNH3o';
 const CLIENT_ID = '534383682503-0c17t6souoc90cvjq6fbh9v2bdeu09j0.apps.googleusercontent.com';
 
+var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/gmail/v1/rest"];
+
 // TODO: Email Implementation
 class Home extends React.Component<appProps, appState> {
     state: appState = {
         fromEmail: "",
         subject: "",
         message: ""
-    }
+    };
 
     componentDidMount(): void {
         this.loadEmailClient()
@@ -51,12 +53,8 @@ class Home extends React.Component<appProps, appState> {
             gapi.client.init({
                 apiKey: API_KEY,
                 clientId: CLIENT_ID,
+                discoveryDocs: DISCOVERY_DOCS,
                 scope: SCOPES
-            }).then(function() {
-                // 3. Initialize and make the API request.
-                return gapi.client.request({
-                    'path': 'https://people.googleapis.com/v1/people/me',
-                })
             }).then((value) => {
                 console.log(value);
             }, (reason) => {
