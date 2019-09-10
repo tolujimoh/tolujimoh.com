@@ -6613,6 +6613,11 @@ normalize-url@^3.0.0:
   resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-3.3.0.tgz#b2e1c4dc4f7c6d57743df733a4f5978d18650559"
   integrity sha512-U+JJi7duF1o+u2pynbp2zXDW2/PADgC30f0GsHZtRh+HOcXHnw137TrNlyxxRvWW5fjKd3bcLHPxofWuCjaeZg==
 
+notyf@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/notyf/-/notyf-3.0.4.tgz#54fc38d08a79877eb5d19b36422bde6ba23d59ee"
+  integrity sha512-hVK6uQAJEIdobprIpi9t40GdGIPCHtCWKqbF5d7l7585lmWdgkjtgt/gqll1g7dU8o2T73SXf2N9ZgXjDMAYfw==
+
 npm-bundled@^1.0.1:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/npm-bundled/-/npm-bundled-1.0.6.tgz#e7ba9aadcef962bb61248f91721cd932b3fe6bdd"

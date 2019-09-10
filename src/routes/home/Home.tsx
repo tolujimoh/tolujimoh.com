@@ -8,8 +8,11 @@ import Col from 'react-bootstrap/es/Col';
 import Image from 'react-bootstrap/es/Image';
 import Card from 'react-bootstrap/es/Card';
 import Form from "react-bootstrap/es/Form";
+import CardColumns from "react-bootstrap/es/CardColumns";
+import {Link} from "react-router-dom";
 
-import emailjs from 'emailjs-com';
+import * as emailjs from 'emailjs-com'
+import { Notyf } from "notyf";
 
 import githubLogo from './images/icons/github-logo.svg';
 // import behanceLogo from './images/icons/behance-logo.svg';
@@ -17,10 +20,8 @@ import githubLogo from './images/icons/github-logo.svg';
 import openheavensImg from './images/openheavens.png';
 import linearAlgebraImg from './images/linear_algebra.png';
 
-
+import 'notyf/notyf.min.css';
 import './Home.css';
-import CardColumns from "react-bootstrap/es/CardColumns";
-import {Link} from "react-router-dom";
 
 type appProps = {}
 
@@ -29,7 +30,6 @@ type appState = {
     subject: string,
     message: string
 }
-
 
 // TODO: Email Implementation
 class Home extends React.Component<appProps, appState> {
@@ -55,10 +55,22 @@ class Home extends React.Component<appProps, appState> {
     handleFormSubmit = (event : React.FormEvent<any>) => {
         event.preventDefault();
 
-        emailjs.send('mailgun','tolujimoh_com_contact_form', this.state, 'user_3fQbNehvf6N2TABPuadeL')
+        const { fromEmail,  subject, message } = this.state;
+        const notyf = new Notyf();
+
+        emailjs.send('mailgun','tolujimoh_com_contact_form', {fromEmail,  subject, message }, 'user_3fQbNehvf6N2TABPuadeL')
             .then((response) => {
-                console.log('SUCCESS!', response.status, response.text);
+
+                this.setState({
+                    fromEmail: "",
+                    subject: "",
+                    message: ""
+                }, () => {
+                    notyf.success('I have received your message and would get back to you');
+                    console.log('SUCCESS!', response.status, response.text);
+                });
             }, (err) => {
+                notyf.error('Unable to send your message. Please try again later');
                 console.log('FAILED...', err);
             });
     };
