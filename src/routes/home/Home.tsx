@@ -78,27 +78,20 @@ class Home extends React.Component<appProps, appState> {
 
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> {
         return (
-            <Container fluid style={{backgroundColor: '#f9f9f9', padding: 24}}>
+            <Container fluid className={'main-content'} style={{backgroundColor: '#f9f9f9', padding: 24}}>
                 <div>
                     <Container fluid className={'intro-content'}>
-                        <Row style={{padding: 80}}>
+                        <Row className={'intro-logo'}>
                             <Col md={4}>
-                                <a href='/' style={{
-                                    textDecoration: 'none',
-                                    color: 'black',
-                                    fontSize: 20,
-                                    fontWeight: 500,
-                                    lineHeight: '24px',
-                                    letterSpacing: 1
-                                }}>tolujimoh<span style={{color: '#F17A6E', fontWeight: 900}}>:</span></a>
+                                <a href='/' >tolujimoh<span style={{color: '#F17A6E', fontWeight: 900}}>:</span></a>
                             </Col>
                             <Col md={8}>
                                 {/*<p style={{letterSpacing: 0.5,  fontSize: 20, maxWidth: 400}}>Here, I try to express my creativity through design and code.</p>*/}
                             </Col>
                         </Row>
-                        <Row style={{padding: 80}}>
+                        <Row className={'intro-text'}>
                             <Col sm={10}>
-                                <p style={{fontSize: 40, fontWeight: 500, maxWidth: 1000}} className={'intro-text'}>Tolu
+                                <p>Tolu
                                     — a
                                     Software Engineer with passion for designing and building products. Currently
                                     studying
@@ -114,7 +107,7 @@ class Home extends React.Component<appProps, appState> {
                             </Col>
                         </Row>
                     </Container>
-                    <Container fluid style={{marginTop: 60, marginBottom: 200, minHeight: 'calc(100vh - 48px)'}}>
+                    <Container fluid className={'work-content'}>
                         <div style={{position: 'relative', top: '-100px'}}>
                             <Container>
                                 <svg height='120' style={{marginLeft: 36}}>
@@ -138,10 +131,10 @@ class Home extends React.Component<appProps, appState> {
                             </Container>
                         </Row>
                         <Row>
-                            <Container style={{marginTop: 120}}>
+                            <Container style={{marginTop: 120, marginBottom: 120}}>
                                 <CardColumns>
                                     <Link to="/">
-                                        <Card style={{maxWidth: 480, border: 0, background: "transparent"}}>
+                                        <Card className={'openheavens-card'}>
                                             <Card.Header style={{
                                                 border: 0,
                                                 background: 'transparent',
@@ -161,12 +154,9 @@ class Home extends React.Component<appProps, appState> {
                                     </Link>
 
                                     <Link to="/">
-                                        <Card style={{
-                                            maxWidth: 480,
-                                            marginTop: 160,
-                                            border: 0,
-                                            background: "transparent"
-                                        }}>
+                                        <Card
+                                            className={'linear-algebra-card'}
+                                            >
                                             <Card.Header style={{
                                                 border: 0,
                                                 background: 'transparent',
@@ -190,12 +180,7 @@ class Home extends React.Component<appProps, appState> {
                             </Container>
                         </Row>
                     </Container>
-                    <Container fluid style={{
-                        marginTop: 60,
-                        minHeight: 'calc(100vh - 48px)',
-                        backgroundColor: '#F1E4E8',
-                        borderRadius: 12
-                    }}>
+                    <Container fluid className={'contact-content'}>
                         <div style={{position: 'relative', top: '-60px'}}>
                             <Container fluid className={'contact-title'}>
                                 <svg height='120' style={{marginLeft: 24}}>

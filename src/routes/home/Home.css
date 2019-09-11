@@ -4,6 +4,60 @@
     border-radius: 12px;
 }
 
+
+@media (max-width: 991.98px) {
+    .intro-text {
+        font-size: 32px !important;
+    }
+}
+
+
+.intro-logo{
+    padding: 80px
+}
+
+.intro-logo a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 1px;
+}
+.intro-text {
+    padding: 80px;
+}
+.intro-text p{
+    font-size: 40px;
+    font-weight: 500;
+    max-width: 1000px;
+}
+
+.social-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 8px;
+}
+
+.work-content {
+    margin-top: 60px;
+    margin-bottom: 200px;
+    min-height: calc(100vh - 48px);
+}
+
+.openheavens-card {
+    max-width: 480px;
+    border: 0;
+    background: transparent;
+}
+
+.linear-algebra-card {
+    max-width: 480px;
+    margin-top: 160px;
+    border: 0;
+    background: transparent;
+}
+
 .contact-form {
     padding-left: 120px;
     padding-right: 120px;
@@ -19,28 +73,52 @@
     letter-spacing: 1px
 }
 
-.social-icon {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 8px;
-}
-
-@media (max-width: 991.98px) {
-    .intro-text {
-        font-size: 32px !important;
-    }
+.contact-content {
+    margin-top: 60px;
+    min-height: calc(100vh - 48px);
+    background-color: #F1E4E8;
+    border-radius: 12px;
 }
 
 @media (max-width: 767.98px) {
+
+    .main-content {
+        padding: 0 !important;
+    }
+
     .intro-text {
+        padding: 0 12px;
+    }
+    .intro-text p{
         font-size: 24px !important;
+    }
+    .intro-logo{
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .intro-content{
+        min-height: 0;
+        padding-bottom: 80px;
+    }
+
+    .work-content {
+        margin-bottom: 0 !important;
+    }
+
+    .card-text {
+        font-size: 20px !important;
+    }
+
+    .linear-algebra-card {
+        margin-top: 0;
     }
 
     .contact-form {
-        padding-left: 30px !important;
-        padding-right: 30px !important;
-        padding-bottom: 60px !important;
+        padding: 0 !important;
+        padding-bottom: 24px !important;
     }
+
 
     .contact-title {
         padding-left: 30px !important;
