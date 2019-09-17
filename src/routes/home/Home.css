@@ -1,19 +1,21 @@
+@media (max-width: 767.98px) {
+    .main-content {
+        padding: 0 !important;
+    }
+}
+
+.main-content {
+    background-color: #f9f9f9;
+    padding: 24px
+}
+
 .intro-content{
-    min-height: calc(100vh - 48px);
     background-color: #ffffff;
     border-radius: 12px;
 }
 
-
-@media (max-width: 991.98px) {
-    .intro-text {
-        font-size: 32px !important;
-    }
-}
-
-
 .intro-logo{
-    padding: 80px
+    padding: 80px 80px 0
 }
 
 .intro-logo a{
@@ -24,13 +26,18 @@
     line-height: 24px;
     letter-spacing: 1px;
 }
+
+.intro-logo span{
+    color: #F17A6E;
+    font-weight: 900;
+}
 .intro-text {
     padding: 80px;
+    height: calc(100vh - 153px);
 }
 .intro-text p{
-    font-size: 40px;
-    font-weight: 500;
-    max-width: 1000px;
+    font-size: 30px;
+    max-width: 720px;
 }
 
 .social-icon {
@@ -39,10 +46,85 @@
     margin-bottom: 8px;
 }
 
+
+@media (max-width: 767.98px) {
+
+    .intro-text {
+        padding: 0 12px;
+    }
+    .intro-text p{
+        font-size: 20px !important;
+    }
+    .intro-logo{
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .intro-content{
+        padding-bottom: 72px;
+    }
+
+}
+
+@media (max-width: 991.98px) {
+    .intro-text {
+        font-size: 32px !important;
+    }
+}
+
+
 .work-content {
     margin-top: 60px;
     margin-bottom: 200px;
     min-height: calc(100vh - 48px);
+}
+
+.work-title {
+     position: relative;
+     top: -100px;
+ }
+
+.work-title svg{
+    margin-left: 36px;
+    height: 120px;
+}
+
+.work-title svg text{
+    fill: #FF3253;
+    letter-spacing: -1px ;
+    font-weight: 900;
+    fill-opacity: 0;
+    font-size: 88px;
+    stroke: #FF3253;
+    stroke-width: 1.5;
+}
+
+.work-text {
+    max-width: 720px;
+    font-size: 24px;
+    letter-spacing: 0.5px;
+}
+
+.work-desc{
+    margin-top: 12px;
+    font-weight: 100;
+    font-size: 20px;
+    font-style: italic;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 767.98px) {
+    .work-text {
+        font-size: 20px;
+    }
+
+    .work-desc{
+        font-size: 16px;
+    }
+
+    .work-content {
+        margin-bottom: 0 !important;
+    }
 }
 
 .openheavens-card {
@@ -80,30 +162,23 @@
     border-radius: 12px;
 }
 
+@media (max-width: 575.98px) { }
+
 @media (max-width: 767.98px) {
 
-    .main-content {
-        padding: 0 !important;
+    .contact-form {
+        font-size: 20px;
     }
 
-    .intro-text {
-        padding: 0 12px;
-    }
-    .intro-text p{
-        font-size: 24px !important;
-    }
-    .intro-logo{
-        padding-left: 12px;
-        padding-right: 12px;
+    .contact-title {
+        font-size: 20px;
     }
 
-    .intro-content{
-        min-height: 0;
-        padding-bottom: 80px;
-    }
 
-    .work-content {
-        margin-bottom: 0 !important;
+
+
+    .work-content a {
+        text-decoration: none !important;
     }
 
     .card-text {
@@ -132,7 +207,6 @@
     padding: 0;
     height: auto;
     font-size: 1.25rem;
-    font-weight: 500;
     line-height: 1.2;
     color: #212529;
     letter-spacing: 1px;
@@ -145,7 +219,6 @@
 
 .contact-form-input::placeholder{
     font-size: 1.25rem;
-    font-weight: 500;
     line-height: 1.2;
     text-decoration: underline;
 }

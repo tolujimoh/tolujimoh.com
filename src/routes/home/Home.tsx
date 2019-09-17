@@ -15,7 +15,7 @@ import * as emailjs from 'emailjs-com'
 import { Notyf } from "notyf";
 
 import githubLogo from './images/icons/github-logo.svg';
-// import behanceLogo from './images/icons/behance-logo.svg';
+import behanceLogo from './images/icons/behance-logo.svg';
 
 import openheavensImg from './images/openheavens.png';
 import linearAlgebraImg from './images/linear_algebra.png';
@@ -78,54 +78,53 @@ class Home extends React.Component<appProps, appState> {
 
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> {
         return (
-            <Container fluid className={'main-content'} style={{backgroundColor: '#f9f9f9', padding: 24}}>
+            <Container fluid className={'main-content'}>
                 <div>
-                    <Container fluid className={'intro-content'}>
+                    <Container fluid className={'intro-content' }>
                         <Row className={'intro-logo'}>
                             <Col md={4}>
-                                <a href='/' >tolujimoh<span style={{color: '#F17A6E', fontWeight: 900}}>:</span></a>
+                                <a href='/' >tolujimoh<span>:</span></a>
                             </Col>
                             <Col md={8}>
                                 {/*<p style={{letterSpacing: 0.5,  fontSize: 20, maxWidth: 400}}>Here, I try to express my creativity through design and code.</p>*/}
                             </Col>
                         </Row>
-                        <Row className={'intro-text'}>
-                            <Col sm={10}>
+                        <Row className={'intro-text align-items-md-center align-items-end'}>
+                            <Col md={10}>
                                 <p>Tolu
                                     — a
-                                    Software Engineer with passion for designing and building products. Currently
+                                    Software Engineer with passion for building products. Currently
                                     studying
                                     at the University of Liverpool for a Masters in Advanced Computer Science.</p>
                             </Col>
-                            <Col sm={2}>
+                            <Col md={2} className={'d-none d-md-block'}>
                                 <div style={{width: 64}} className='float-right'>
                                     <a href={'https://github.com/tolujimoh'} target={'_blank'}>
                                         <Image src={githubLogo} className={'social-icon'}/>
                                     </a>
-                                    {/*<a href={'http://behance.net/tolu_jimoh'} target={'_blank'}><Image src={behanceLogo} style={{ width: 64, height: 64 }}/></a>*/}
+                                    <a href={'http://behance.net/tolu_jimoh'} target={'_blank'}><Image src={behanceLogo}  className={'social-icon'} /></a>
                                 </div>
                             </Col>
                         </Row>
                     </Container>
                     <Container fluid className={'work-content'}>
-                        <div style={{position: 'relative', top: '-100px'}}>
+                        <div className={'work-title'}>
                             <Container>
-                                <svg height='120' style={{marginLeft: 36}}>
-                                    <text fill='#FF3253' letterSpacing='-1' fontWeight='900' fillOpacity='0'
-                                          fontSize='88' x='0'
-                                          y='90' stroke='#FF3253' strokeWidth='1.5'>Work.
+                                <svg>
+                                    <text x='0'
+                                          y='90' >Work.
                                     </text>
                                 </svg>
                             </Container>
                         </div>
-                        <Row style={{fontSize: 24, letterSpacing: 0.5}}>
+                        <Row>
                             <Container>
                                 <Col md={8}>
-                                    <p style={{maxWidth: 700, fontWeight: 500}}>My long run goal is to contribute to
+                                    <p className={'work-text'}>My long run goal is to contribute to
                                         products
                                         that solve real-world problems. I strive to
                                         become a part of a design-driven organization.</p>
-                                    <p style={{marginTop: 12, fontWeight: 100}}>Currently working on a detailed case
+                                    <p className={'work-desc'} >Currently working on a detailed case
                                         study for each of my projects</p>
                                 </Col>
                             </Container>
@@ -145,9 +144,9 @@ class Home extends React.Component<appProps, appState> {
                                             }} as="h5">CASE STUDY</Card.Header>
                                             <Card.Img variant="top" src={openheavensImg}/>
                                             <Card.Body
-                                                style={{paddingLeft: 0, color: '#222', fontSize: 32, fontWeight: 900}}>
+                                                style={{paddingLeft: 0, color: '#222', fontSize: 28, textDecoration: 'underline', letterSpacing: 0.5}}>
                                                 <Card.Text>
-                                                    Openheavens Mobile Application
+                                                    Openheavens
                                                 </Card.Text>
                                             </Card.Body>
                                         </Card>
@@ -167,9 +166,9 @@ class Home extends React.Component<appProps, appState> {
                                             }} as="h5">VISUALLY EXPLAINED</Card.Header>
                                             <Card.Img variant="top" src={linearAlgebraImg}/>
                                             <Card.Body
-                                                style={{paddingLeft: 0, color: '#222', fontSize: 32, fontWeight: 900}}>
+                                                style={{paddingLeft: 0, color: '#222', fontSize: 28, textDecoration: 'underline', letterSpacing: 0.5}}>
                                                 <Card.Text>
-                                                    Introduction to Linear Algebra
+                                                    Linear Algebra
                                                 </Card.Text>
                                             </Card.Body>
 
@@ -193,7 +192,7 @@ class Home extends React.Component<appProps, appState> {
                         </div>
                         <Row className={'contact-title'}>
                             <Col lg={8}>
-                                <p style={{fontWeight: 500}}>You can find me on <a
+                                <p>You can find me on <a
                                     href={'https://www.linkedin.com/in/tolulope-jimoh-945b26b7/'}
                                     target={'_blank'}>LinkedIn</a>, or <a href={'https://twitter.com/tolujimoh'}
                                                                           target={'_blank'}>Twitter</a>.<br/>
@@ -212,7 +211,7 @@ class Home extends React.Component<appProps, appState> {
                                         <div className='card-body'>
                                             <Row>
                                                 <Col md={3}>
-                                                    <h5 className='card-text'>From:</h5>
+                                                    <p className='card-text contact-form-input'>From:</p>
                                                 </Col>
                                                 <Col md={9}>
                                                     <Form.Control className="contact-form-input" type="email"
@@ -223,15 +222,15 @@ class Home extends React.Component<appProps, appState> {
                                             </Row>
                                             <Row>
                                                 <Col md={3}>
-                                                    <h5 className='card-text'>To:</h5>
+                                                    <p className='card-text contact-form-input'>To:</p>
                                                 </Col>
                                                 <Col md={9}>
-                                                    <h5 className='card-title'>Tolu Jimoh</h5>
+                                                    <p className='card-title contact-form-input'>Tolu Jimoh</p>
                                                 </Col>
                                             </Row>
                                             <Row>
                                                 <Col md={3}>
-                                                    <h5 className='card-text'>Subject:</h5>
+                                                    <p className='card-text contact-form-input'>Subject:</p>
                                                 </Col>
                                                 <Col md={9}>
                                                     <Form.Control className="contact-form-input"
@@ -241,7 +240,7 @@ class Home extends React.Component<appProps, appState> {
                                             </Row>
                                             <hr/>
                                             <br/>
-                                            <h5 className='card-text'>Hi Tolu,</h5>
+                                            <p className='card-text contact-form-input'>Hi Tolu,</p>
                                             <Form.Control as="textarea" rows="4" className="contact-form-input"
                                                           value={this.state.message} onChange={this.handleMessageChange}  placeholder="Type Message"/>
                                             <br/>
