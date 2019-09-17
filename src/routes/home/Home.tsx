@@ -56,7 +56,29 @@ class Home extends React.Component<appProps, appState> {
         event.preventDefault();
 
         const { fromEmail,  subject, message } = this.state;
+
         const notyf = new Notyf();
+
+        let error = false;
+
+        if (fromEmail.trim() === ''){
+            notyf.error('Please enter your email');
+            error = true
+        }
+
+        if (subject.trim() === ''){
+            notyf.error('Please enter the subject');
+            error = true
+        }
+
+        if (message.trim() === ''){
+            notyf.error('Please enter the message');
+            error = true
+        }
+
+        if (error)
+            return;
+
 
         emailjs.send('mailgun','tolujimoh_com_contact_form', {fromEmail,  subject, message }, 'user_3fQbNehvf6N2TABPuadeL')
             .then((response) => {
