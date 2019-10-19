@@ -122,7 +122,7 @@ class Home extends React.Component<appProps, appState> {
                                     <a href={'https://github.com/tolujimoh'} target={'_blank'}>
                                         <Image src={githubLogo} className={'social-icon'}/>
                                     </a>
-                                    <a href={'http://behance.net/tolu_jimoh'} target={'_blank'}><Image src={behanceLogo}  className={'social-icon'} /></a>
+                                    {/*<a href={'http://behance.net/tolu_jimoh'} target={'_blank'}><Image src={behanceLogo}  className={'social-icon'} /></a>*/}
                                 </div>
                             </Col>
                         </Row>

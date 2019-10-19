@@ -7,7 +7,6 @@ import Image from "react-bootstrap/es/Image";
 
 import '../Project.css';
 import {Link} from "react-router-dom";
-import ScrollToTop from "../../../components/layout/ScrollToTop";
 
 type appProps = {}
 
@@ -29,7 +28,6 @@ class futMxShuttle extends React.Component<appProps, appState> {
 
         return (
             <>
-                <ScrollToTop/>
                 <header className="m-3 p-4 card bg-white border-0">
                     <Container fluid>
                         <Row style={{padding: 80, paddingTop: 20, paddingBottom: 20}}>
@@ -69,7 +67,7 @@ class futMxShuttle extends React.Component<appProps, appState> {
                         <Row>
                             <Col sm={7}>
                                 <p style={{fontWeight: 900, fontSize: 20, color: '#CCCCCC'}}>OVERVIEW</p>
-                                <p style={{fontWeight: 100, fontSize: 28}}>FUT Mx Shuttle is a travel scheduling application for the FUT Mx Bus service. Buses The goal of this project is to calculate the Estimated Time of Arrival (ETA) and determine the destination station for a trip using the information received from each bus tracker.  The ETA and trip destination is then shown on a digital signage display at each station. </p>
+                                <p style={{fontWeight: 100, fontSize: 28}}>FUT Mx Shuttle is a travel scheduling application for the FUT Mx Bus service. The goal of this project was to calculate the Estimated Time of Arrival (ETA) and determine the destination station for a trip using the information received from each bus tracker.  The ETA and trip destination are then shown on a digital signage display at each station. </p>
                             </Col>
                             <Col sm={5}>
                                 <p style={{fontWeight: 900, fontSize: 20, color: '#CCCCCC'}}>HATS
