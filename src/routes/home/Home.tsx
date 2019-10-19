@@ -122,7 +122,7 @@ class Home extends React.Component<appProps, appState> {
                                     <a href={'https://github.com/tolujimoh'} target={'_blank'}>
                                         <Image src={githubLogo} className={'social-icon'}/>
                                     </a>
-                                    <a href={'http://behance.net/tolu_jimoh'} target={'_blank'}><Image src={behanceLogo}  className={'social-icon'} /></a>
+                                    {/*<a href={'http://behance.net/tolu_jimoh'} target={'_blank'}><Image src={behanceLogo}  className={'social-icon'} /></a>*/}
                                 </div>
                             </Col>
                         </Row>
@@ -144,8 +144,8 @@ class Home extends React.Component<appProps, appState> {
                                         products
                                         that solve real-world problems. I strive to
                                         become a part of a design-driven organization.</p>
-                                    <p className={'work-desc'} >Currently working on a detailed case
-                                        study for each of my projects</p>
+                                    {/*<p className={'work-desc'} >Currently working on a detailed case*/}
+                                    {/*    study for each of my projects</p>*/}
                                 </Col>
                             </Container>
                         </Row>

@@ -7,7 +7,6 @@ import Image from "react-bootstrap/es/Image";
 
 import '../Project.css';
 import {Link} from 'react-router-dom';
-import ScrollToTop from "../../../components/layout/ScrollToTop";
 
 type appProps = {}
 
@@ -34,7 +33,6 @@ class openHeavens extends React.Component<appProps, appState> {
 
         return (
             <>
-                <ScrollToTop/>
                 <header className="m-3 p-4 card bg-white border-0">
                     <Container fluid>
                         <Row style={{padding: 80, paddingTop: 20, paddingBottom: 20}}>
@@ -59,10 +57,12 @@ class openHeavens extends React.Component<appProps, appState> {
                     <Container>
                         <Row>
                             <Col style={{padding: '94px 48px'}}>
-                                <Image className={'float-left'} style={{width: 80, height: 'auto', marginRight: 24}} src={openHeavensIcon}/>
+                                <Image className={'float-left'} style={{width: 80, height: 'auto', marginRight: 24}}
+                                       src={openHeavensIcon}/>
                                 <div>
                                     <p style={{fontSize: 28, fontWeight: 900, marginBottom: 0}}>Openheavens Connect</p>
-                                    <p style={{fontSize: 20, fontWeight: 100, color: '#A2A2A2'}}>Product Manager and Software Engineer</p>
+                                    <p style={{fontSize: 20, fontWeight: 100, color: '#A2A2A2'}}>Product Manager and
+                                        Software Engineer</p>
                                 </div>
                             </Col>
                         </Row>
@@ -133,8 +133,10 @@ class openHeavens extends React.Component<appProps, appState> {
                                     Application</p>
                             </Col>
                             <Col>
-                                <Image src={appleStoreIcon} style={{width: 200, height: "auto"}}
-                                       className={'float-right'}/>
+                                <a href={'https://apps.apple.com/ng/app/open-heavens-connect/id1409055190'}
+                                   target={'_blank'}>
+                                    <Image src={appleStoreIcon} style={{width: 200, height: "auto"}}
+                                           className={'float-right'}/></a>
                             </Col>
                         </Row>
                         <Row>
