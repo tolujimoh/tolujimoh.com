@@ -133,7 +133,7 @@
     background: transparent;
 }
 
-.linear-algebra-card {
+.fut-mx-shuttle-card {
     max-width: 480px;
     margin-top: 160px;
     border: 0;
@@ -185,7 +185,7 @@
         font-size: 20px !important;
     }
 
-    .linear-algebra-card {
+    .fut-mx-shuttle-card{
         margin-top: 0;
     }
 

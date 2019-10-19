@@ -18,7 +18,7 @@ import githubLogo from './images/icons/github-logo.svg';
 import behanceLogo from './images/icons/behance-logo.svg';
 
 import openheavensImg from './images/openheavens.png';
-import linearAlgebraImg from './images/linear_algebra.png';
+import futMxShuttleImg from './images/fut_mx_shuttle.png';
 
 import 'notyf/notyf.min.css';
 import './Home.css';
@@ -115,9 +115,7 @@ class Home extends React.Component<appProps, appState> {
                             <Col md={10}>
                                 <p>Tolu
                                     — a
-                                    Software Engineer with passion for building products. Currently
-                                    studying
-                                    at the University of Liverpool for a Masters in Advanced Computer Science.</p>
+                                    Software Engineer with passion for building products. Just completed a Masters in Advanced Computer Science at the University of Liverpool.</p>
                             </Col>
                             <Col md={2} className={'d-none d-md-block'}>
                                 <div style={{width: 64}} className='float-right'>
@@ -154,7 +152,7 @@ class Home extends React.Component<appProps, appState> {
                         <Row>
                             <Container style={{marginTop: 120, marginBottom: 120}}>
                                 <CardColumns>
-                                    <Link to="/">
+                                    <Link to="/projects/openheavens">
                                         <Card className={'openheavens-card'}>
                                             <Card.Header style={{
                                                 border: 0,
@@ -174,9 +172,9 @@ class Home extends React.Component<appProps, appState> {
                                         </Card>
                                     </Link>
 
-                                    <Link to="/">
+                                    <Link to="/projects/fut_mx_shuttle">
                                         <Card
-                                            className={'linear-algebra-card'}
+                                            className={'fut-mx-shuttle-card'}
                                             >
                                             <Card.Header style={{
                                                 border: 0,
@@ -185,12 +183,12 @@ class Home extends React.Component<appProps, appState> {
                                                 color: '#CCCCCC',
                                                 fontSize: 20,
                                                 fontWeight: 800
-                                            }} as="h5">VISUALLY EXPLAINED</Card.Header>
-                                            <Card.Img variant="top" src={linearAlgebraImg}/>
+                                            }} as="h5">CASE STUDY</Card.Header>
+                                            <Card.Img variant="top" src={futMxShuttleImg}/>
                                             <Card.Body
                                                 style={{paddingLeft: 0, color: '#222', fontSize: 28, textDecoration: 'underline', letterSpacing: 0.5}}>
                                                 <Card.Text>
-                                                    Linear Algebra
+                                                    FUT Mx Shuttle
                                                 </Card.Text>
                                             </Card.Body>
 
