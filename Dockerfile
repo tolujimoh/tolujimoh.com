@@ -5,16 +5,14 @@ FROM node:10-alpine AS build
 
 WORKDIR /usr/src/app
 
-RUN npm install -g yarn
-
 COPY package*.json ./
-RUN yarn install
+RUN npm install
 
 COPY . .
 
 ARG REACT_APP_ENVIRONMENT
 
-RUN yarn build
+RUN npm run build
 
 # move build folder to nginx
 # run nginx to server static files

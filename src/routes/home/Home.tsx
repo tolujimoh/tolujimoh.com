@@ -115,7 +115,7 @@ class Home extends React.Component<appProps, appState> {
                             <Col md={10}>
                                 <p>Tolu
                                     — a
-                                    Software Engineer with passion for building products. Just completed a Masters in Advanced Computer Science at the University of Liverpool.</p>
+                                    Software Engineer with passion for building products. Currently working as a Software Engineer Contractor at <a href="https://www.toptal.com#connect-exclusively-awesome-freelancers" target="_blank">Toptal</a>.</p>
                             </Col>
                             <Col md={2} className={'d-none d-md-block'}>
                                 <div style={{width: 64}} className='float-right'>
@@ -144,8 +144,6 @@ class Home extends React.Component<appProps, appState> {
                                         products
                                         that solve real-world problems. I strive to
                                         become a part of a design-driven organization.</p>
-                                    {/*<p className={'work-desc'} >Currently working on a detailed case*/}
-                                    {/*    study for each of my projects</p>*/}
                                 </Col>
                             </Container>
                         </Row>
