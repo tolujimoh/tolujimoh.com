@@ -142,8 +142,7 @@ class Home extends React.Component<appProps, appState> {
                                 <Col md={8}>
                                     <p className={'work-text'}>My long run goal is to contribute to
                                         products
-                                        that solve real-world problems. I strive to
-                                        become a part of a design-driven organization.</p>
+                                        that solve real-world problems. I thrive in an environment where I can make decisions, grow and have a tangible impact.</p>
                                 </Col>
                             </Container>
                         </Row>
