@@ -16,7 +16,7 @@ import { Notyf } from "notyf";
 
 
 import githubLogo from './images/icons/github-logo.svg';
-import behanceLogo from './images/icons/behance-logo.svg';
+// import behanceLogo from './images/icons/behance-logo.svg';
 
 import openheavensImg from './images/openheavens.png';
 import futMxShuttleImg from './images/fut_mx_shuttle.png';
@@ -116,14 +116,14 @@ class Home extends React.Component<appProps, appState> {
                             <Col md={10}>
                                 <p>Tolu
                                     — a
-                                    Software Engineer with passion for building products. Currently working as a Software Engineer at <a href="https://www.amazon.jobs" target="_blank">Amazon</a>.</p>
+                                    Software Engineer with passion for building products. Currently working as a Software Engineer at <a href="https://www.amazon.jobs" target="_blank" rel="noopener noreferrer">Amazon</a>.</p>
                             </Col>
                             <Col md={2} className={'d-none d-md-block'}>
                                 <div style={{width: 64}} className='float-right'>
-                                    <a href={'https://github.com/tolujimoh'} target={'_blank'}>
+                                    <a href={'https://github.com/tolujimoh'} target="_blank" rel="noopener noreferrer">
                                         <Image src={githubLogo} className={'social-icon'}/>
                                     </a>
-                                    {/*<a href={'http://behance.net/tolu_jimoh'} target={'_blank'}><Image src={behanceLogo}  className={'social-icon'} /></a>*/}
+                                    {/*<a href={'http://behance.net/tolu_jimoh'} target="_blank" rel="noopener noreferrer"><Image src={behanceLogo}  className={'social-icon'} /></a>*/}
                                 </div>
                             </Col>
                         </Row>
@@ -212,8 +212,8 @@ class Home extends React.Component<appProps, appState> {
                             <Col lg={8}>
                                 <p>You can find me on <a
                                     href={'https://www.linkedin.com/in/tolujimoh/'}
-                                    target={'_blank'}>LinkedIn</a>, or <a href={'https://twitter.com/tolujimoh'}
-                                                                          target={'_blank'}>Twitter</a>.<br/>
+                                    target="_blank" rel="noopener noreferrer">LinkedIn</a>, or <a href={'https://twitter.com/tolujimoh'}
+                                                                          target="_blank" rel="noopener noreferrer">Twitter</a>.<br/>
                                     Go ahead and contact me via any of those communication channels, but if you’d like
                                     you
                                     can also send me an email.</p>

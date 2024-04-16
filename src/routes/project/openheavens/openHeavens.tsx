@@ -134,7 +134,7 @@ class openHeavens extends React.Component<appProps, appState> {
                             </Col>
                             <Col>
                                 <a href={'https://apps.apple.com/ng/app/open-heavens-connect/id1409055190'}
-                                   target={'_blank'}>
+                                   target="_blank" rel="noopener noreferrer">
                                     <Image src={appleStoreIcon} style={{width: 200, height: "auto"}}
                                            className={'float-right'}/></a>
                             </Col>
