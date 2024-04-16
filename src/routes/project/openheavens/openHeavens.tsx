@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Col from "react-bootstrap/es/Col";
-import Row from "react-bootstrap/es/Row";
-import Container from "react-bootstrap/es/Container";
-import Image from "react-bootstrap/es/Image";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import Container from "react-bootstrap/Container";
+import Image from "react-bootstrap/Image";
 
 import '../Project.css';
 import {Link} from 'react-router-dom';

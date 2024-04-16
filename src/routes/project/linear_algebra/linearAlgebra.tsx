@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Col from "react-bootstrap/es/Col";
-import Row from "react-bootstrap/es/Row";
-import Container from "react-bootstrap/es/Container";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import Container from "react-bootstrap/Container";
 
 import '../Project.css';
 import './linearAlgebra.css';

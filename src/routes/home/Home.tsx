@@ -2,13 +2,13 @@
 
 import React from 'react';
 
-import Row from 'react-bootstrap/es/Row';
-import Container from 'react-bootstrap/es/Container';
-import Col from 'react-bootstrap/es/Col';
-import Image from 'react-bootstrap/es/Image';
-import Card from 'react-bootstrap/es/Card';
-import Form from "react-bootstrap/es/Form";
-import CardColumns from "react-bootstrap/es/CardColumns";
+import Row from 'react-bootstrap/Row';
+import Container from 'react-bootstrap/Container';
+import Col from 'react-bootstrap/Col';
+import Image from 'react-bootstrap/Image';
+import Card from 'react-bootstrap/Card';
+import Form from "react-bootstrap/Form";
+import CardColumns from "react-bootstrap/CardColumns";
 import {Link} from "react-router-dom";
 
 import * as emailjs from 'emailjs-com'
@@ -259,7 +259,7 @@ class Home extends React.Component<appProps, appState> {
                                             <hr/>
                                             <br/>
                                             <p className='card-text contact-form-input'>Hi Tolu,</p>
-                                            <Form.Control as="textarea" rows="4" className="contact-form-input"
+                                            <Form.Control as="textarea" rows={4} className="contact-form-input"
                                                           value={this.state.message} onChange={this.handleMessageChange}  placeholder="Type Message"/>
                                             <br/>
                                             <input type='submit' name='Send Email' className='btn btn-primary float-right'/>
