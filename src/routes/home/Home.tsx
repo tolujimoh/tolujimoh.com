@@ -14,6 +14,7 @@ import {Link} from "react-router-dom";
 import * as emailjs from 'emailjs-com'
 import { Notyf } from "notyf";
 
+
 import githubLogo from './images/icons/github-logo.svg';
 import behanceLogo from './images/icons/behance-logo.svg';
 
@@ -28,7 +29,7 @@ type appProps = {}
 type appState = {
     fromEmail: string,
     subject: string,
-    message: string
+    message: string,
 }
 
 // TODO: Email Implementation
@@ -115,7 +116,7 @@ class Home extends React.Component<appProps, appState> {
                             <Col md={10}>
                                 <p>Tolu
                                     — a
-                                    Software Engineer with passion for building products. Currently working as a Software Engineer Contractor at <a href="https://www.toptal.com#connect-exclusively-awesome-freelancers" target="_blank">Toptal</a>.</p>
+                                    Software Engineer with passion for building products. Currently working as a Software Engineer at <a href="https://www.amazon.jobs" target="_blank">Amazon</a>.</p>
                             </Col>
                             <Col md={2} className={'d-none d-md-block'}>
                                 <div style={{width: 64}} className='float-right'>
@@ -210,7 +211,7 @@ class Home extends React.Component<appProps, appState> {
                         <Row className={'contact-title'}>
                             <Col lg={8}>
                                 <p>You can find me on <a
-                                    href={'https://www.linkedin.com/in/tolulope-jimoh-945b26b7/'}
+                                    href={'https://www.linkedin.com/in/tolujimoh/'}
                                     target={'_blank'}>LinkedIn</a>, or <a href={'https://twitter.com/tolujimoh'}
                                                                           target={'_blank'}>Twitter</a>.<br/>
                                     Go ahead and contact me via any of those communication channels, but if you’d like
